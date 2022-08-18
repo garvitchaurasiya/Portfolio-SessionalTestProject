@@ -1,0 +1,413 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar > div{
+    display: inline-block;
+    padding: 30px 0px;
+}
+.navbar > div:first-child{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar > div:nth-child(2){
+    float: right;
+}
+.navbar > div > div{
+    display: inline-block;
+    padding-right: 30px;
+}
+
+/* Hero Section */
+.heroSection{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 90px;
+    margin-bottom: 20vh;
+} 
+.profilePicture{
+    border-radius: 50%;
+    width: 400px;
+}
+
+.buttonStyle{
+    background-image: linear-gradient(#ffeb3b, #ff8d00);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 15px 20px 0px rgb(255, 196, 0, 0.3);
+}
+.heroSection i{
+    font-size: 50px;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+/* Services Section */
+.servicesSection{
+    display: flex;
+    justify-content: space-around;
+    padding: 0px 90px;
+    margin-bottom: 20vh;
+}
+.servicesSection .cards {
+    /* width: 30vw; */
+    margin-right: 10vw;
+}
+.servicesSection .cards .card{
+    padding: 30px;
+    height: 280px;
+    width: 200px;
+    background-color: white;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.servicesSection .cards div img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.servicesSection .cards button{
+    margin:auto;
+    display: block;
+    color: skyblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+.servicesSection .cards>div:nth-child(2){
+    position: absolute;
+    margin-left: -300px;
+    margin-top: -150px;
+}
+.servicesSection .cards>div:nth-child(1){
+    position: relative;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+.servicesSection .card p{
+    color: black;
+    position: absolute;
+    bottom: 0px;
+    width: 140px;
+}
+
+.stats{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0px auto 30vh;
+    width: 50vw;
+}
+.stats div div{
+    height: 100px;
+    width: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color:orange;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.stats div p:nth-child(3){
+    color: orange;
+}
+.stats div p:nth-child(2){
+    margin-top:30px;
+    margin-bottom: 0;
+}
+
+/*  */
+
+.companies{
+    background-color: white;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.companies img{
+    border-radius: 50%;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: 2px solid grey;
+}
+/* .companies img:nth-child(2){
+    margin-left: -100px;
+} */
+.companies img:nth-child(2){
+    margin-top: 150px;
+    background-color: white;
+}
+.companies img:nth-child(3){
+    margin-left: 150px;
+    background-color: white;
+}
+.companies img:nth-child(4){
+    margin-top: -150px;
+}
+.companies img:nth-child(5){
+    margin-left: -150px;
+    padding: 20px;
+    background-color: white;
+}
+.companiesSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.companiesSection .coloredDiv1, .companiesSection .coloredDiv2{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+    margin-left: 250px;
+}
+.companiesSection .coloredDiv1{
+    background-color: blue;
+    margin-bottom: 150px;
+
+}
+.companiesSection .coloredDiv2{
+    background-color: #ffeb3b;
+    margin-top: 150px;
+}
+
+
+/* Recent Projects Section */
+
+.projectsCards{
+    display:flex;
+    justify-content: space-around;
+}
+.recentProjectsContainer>div:first-child{
+    text-align: center;
+    margin-bottom: 20vh;
+}
+.projectsCards .card{
+    background-color: #141414;
+    padding: 20px 50px 50px;
+    text-align: center;
+    width: 270px;
+    border-radius: 12px;
+    box-shadow: -1px -1px grey;
+    transition-property: bottom;
+    transition-duration: 0.5s;
+    position: relative;
+    bottom: 0;
+}
+.projectsCards .card:hover{
+    bottom: 10px;
+}
+.projectsCards .card button{
+    padding: 10px 20px;
+    border-radius: 100px;
+    box-shadow: -3px 3px #007454;
+    transition: box-shadow 0.2s;
+    background-color: inherit;
+    border:none;
+    color: inherit;
+    width: 100px;
+    margin: auto;
+}
+.projectsCards .card button:hover{
+    box-shadow: 3px -3px #007454;
+}
+.projectsCards .card button span{
+    font-size:20px;
+    font-weight: bold;
+}
+.projectsCards .card button span:hover{
+    color: blue;
+}
+
+/* Work Section */
+
+.pastWorkContainer{
+    margin: 50vh 0 200px;
+}
+.pastWorkContent{
+    margin:10vh auto 10vh;
+    padding: 20px 0;
+    text-align: center;
+    width: 50vw;
+    background-color: #4c4c4c;
+    border: 5px solid white;
+    border-radius: 20px;
+}
+.pastWorkContent img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
+.pastWorkContent button{
+    background-color: white;
+    padding: 5px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+}
+
+/* Contact */
+
+.contact{
+    display: flex;
+    text-align: center;
+    padding: 0 10vw;
+}
+.contact form{
+    margin-left: 15vw;
+    width: 30vw;
+}
+.contact form input{
+    display: block;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+    height: 40px;
+}
+.contact form textarea{
+    display: block;
+    border: 1px solid orangered;
+    border-radius: 10px;
+    width: 100%;
+}
+.contact form button{
+    margin-top: 40px;
+    padding: 10px 30px;
+    font-size: 18px;
+}
+.box {
+    margin:auto;
+    width: 100vw;
+    height: 50vh;
+    background: radial-gradient(110% 60% at bottom, transparent 50%, #ffeb3b 51%);
+    transform: rotate(180deg) skewY(356deg);
+}
+
+.box2 {
+    width: 100vw;
+    height: 25vh;
+    background-color: #ffeb3b;
+    margin-top:-60px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .heroSection {
+      flex-direction: column;
+    }
+    .profilePicture{
+        width: 50vw;
+    }
+    .projectsCards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .stats {
+        margin: 0px auto 30vh;
+        width: 90vw;
+    }
+    .servicesSection{
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+    .servicesSection>div:nth-child(1){
+        width: 90vw;
+    }
+    .servicesSection .cards {
+        /* width: 30vw; */
+        margin-right: 0;
+    }
+    .servicesSection .cards .card{
+        width: 90vw;
+    }
+    .servicesSection .cards>div:nth-child(2){
+        position: static;
+        margin-left: 0;
+        margin-top: 0px;
+    }
+    .servicesSection .cards>div:nth-child(1){
+        position: relative;
+        margin-left: 0;
+    }
+    .servicesSection .card p{
+        width: 90vw;
+    }
+    .projectsCards .card{
+        margin-bottom: 30px;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .contact form{
+        width: 80vw;
+        margin-left: 0;
+        margin-top: 10vh;
+    }
+
+
+
+
+
+    .companies{
+        height: 250px;
+        width: 250px;
+    }
+    .companies img{
+        height: 75px;
+        width: 75px;
+        border: 2px solid grey;
+    }
+    .companies img:nth-child(2){
+        margin-top: 125px;
+        background-color: white;
+    }
+    .companies img:nth-child(3){
+        margin-left: 125px;
+        background-color: white;
+    }
+    .companies img:nth-child(4){
+        margin-top: -125px;
+    }
+    .companies img:nth-child(5){
+        margin-left: -125px;
+        padding: 20px;
+        background-color: white;
+    }
+    .companiesSection{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .companiesSection .coloredDiv1, .companiesSection .coloredDiv2{
+        height: 175px;
+        width: 175px;
+        position: absolute;
+        border-radius: 50%;
+        margin-left: 175px;
+    }
+    .companiesSection .coloredDiv1{
+        background-color: blue;
+        margin-bottom: 150px;
+    
+    }
+    .companiesSection .coloredDiv2{
+        background-color: #ffeb3b;
+        margin-top: 150px;
+    }
+  }
