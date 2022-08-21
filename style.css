@@ -3,18 +3,98 @@ body{
     color: white;
     font-family: 'Times New Roman', Times, serif;
 }
-.navbar > div{
+
+.switch {
+    margin-left: 5vw;
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { 
+opacity: 0;
+width: 0;
+height: 0;
+}
+
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: white;
+-webkit-transition: .4s;
+transition: .4s;
+}
+
+.slider:before {
+position: absolute;
+content: "";
+height: 26px;
+width: 26px;
+left: 0px;
+bottom: 1px;
+background-color: #ffeb3b;
+-webkit-transition: .4s;
+transition: .4s;
+}
+.slider i{
+color: #ffeb3b;
+position: relative;
+top: -2px;
+left: 2px;
+}
+
+input:checked + .slider {
+background-color: black;
+}
+
+input:focus + .slider {
+box-shadow: 0 0 1px white;
+}
+
+input:checked + .slider:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+border-radius: 34px;
+border: 3px solid #ffeb3b;
+}
+
+.slider.round:before {
+border-radius: 50%;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+.nav .navChild{
     display: inline-block;
     padding: 30px 0px;
 }
-.navbar > div:first-child{
+.nav .navChild:first-child{
     font-size: 1.5rem;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    max-width: 350px;
 }
-.navbar > div:nth-child(2){
+.nav .navChild:nth-child(2){
     float: right;
 }
-.navbar > div > div{
+.nav .navChild > div{
     display: inline-block;
     padding-right: 30px;
 }
@@ -38,12 +118,17 @@ body{
     padding: 10px 15px;
     border-radius: 25px;
     border: none;
-    box-shadow: 0px 15px 20px 0px rgb(255, 196, 0, 0.3);
+    box-shadow: 0px 15px 20px 0px #8f6b00
+}
+.buttonStyle:hover{
+    background-image: linear-gradient(white, white);
+    color: #ff8d00;
 }
 .heroSection i{
     font-size: 50px;
     margin-top: 100px;
     margin-left: 20px;
+    color: #ffeb3b;
 }
 
 /* Services Section */
@@ -105,8 +190,8 @@ body{
     width: 50vw;
 }
 .stats div div{
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -126,6 +211,9 @@ body{
 
 /*  */
 
+.brands h1{
+    font-size: 60px;
+}
 .companies{
     background-color: white;
     height: 300px;
@@ -298,17 +386,29 @@ body{
     background: radial-gradient(110% 60% at bottom, transparent 50%, #ffeb3b 51%);
     transform: rotate(180deg) skewY(356deg);
 }
-
 .box2 {
     width: 100vw;
-    height: 25vh;
+    height: 40vh;
     background-color: #ffeb3b;
-    margin-top:-60px;
+    margin-top: -193px;
+    position: absolute;
+    text-align: center;
+}
+.box2 .icons i{
+    font-size: 50px;
+    margin: 50px 20px
 }
 
 @media only screen and (max-width: 1000px) {
+    .options>div:not(:last-child){
+        display: none;
+    }
     .heroSection {
       flex-direction: column;
+      padding: 0 40px;
+    }
+    .heroSection .icons i{
+        margin-bottom: 100px;
     }
     .profilePicture{
         width: 50vw;
@@ -327,26 +427,27 @@ body{
         padding: 0;
     }
     .servicesSection>div:nth-child(1){
-        width: 90vw;
+        width: 80vw;
     }
     .servicesSection .cards {
-        /* width: 30vw; */
+        margin-top: 100px;
         margin-right: 0;
     }
     .servicesSection .cards .card{
-        width: 90vw;
+        width: 80vw;
     }
     .servicesSection .cards>div:nth-child(2){
         position: static;
         margin-left: 0;
         margin-top: 0px;
+        margin-bottom: 50px;
     }
     .servicesSection .cards>div:nth-child(1){
         position: relative;
         margin-left: 0;
     }
     .servicesSection .card p{
-        width: 90vw;
+        width: 90%;
     }
     .projectsCards .card{
         margin-bottom: 30px;
@@ -359,11 +460,9 @@ body{
         margin-left: 0;
         margin-top: 10vh;
     }
-
-
-
-
-
+    .brands h1{
+        font-size: 40px;
+    }
     .companies{
         height: 250px;
         width: 250px;
@@ -375,39 +474,39 @@ body{
     }
     .companies img:nth-child(2){
         margin-top: 125px;
-        background-color: white;
     }
     .companies img:nth-child(3){
         margin-left: 125px;
-        background-color: white;
     }
     .companies img:nth-child(4){
         margin-top: -125px;
     }
     .companies img:nth-child(5){
         margin-left: -125px;
-        padding: 20px;
-        background-color: white;
     }
     .companiesSection{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        margin-top: 100px;
     }
     .companiesSection .coloredDiv1, .companiesSection .coloredDiv2{
         height: 175px;
         width: 175px;
-        position: absolute;
-        border-radius: 50%;
         margin-left: 175px;
     }
     .companiesSection .coloredDiv1{
-        background-color: blue;
         margin-bottom: 150px;
-    
     }
     .companiesSection .coloredDiv2{
-        background-color: #ffeb3b;
         margin-top: 150px;
+    }
+    .stats div div{
+        height: 70px;
+        width: 70px;
+    }
+    .pastWorkContainer{
+        margin-top: 10vh;
+    }
+    .box {
+        height: 40vh;
+        background: radial-gradient(110% 30% at bottom, transparent 50%, #ffeb3b 51%);
     }
   }
